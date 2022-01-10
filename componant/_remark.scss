@@ -1,0 +1,114 @@
+.remark{
+
+    margin-top: 1rem;
+    & .news{
+       display: flex;
+       align-items: flex-start;
+       column-gap: 3rem;
+       & .comment{   
+           @include title_main
+       }
+       & .comment-left{
+           flex: 1;
+       }
+       & .comment-right{
+           flex: 1;
+       }
+       & .comment_main{
+           display: flex;
+           flex-direction: column;
+          
+           & .colums{
+               display: flex;
+               column-gap: 2rem;
+               margin-bottom: 4rem;
+           }
+           &-content{
+              & h6{
+                color: $color-remark;
+                font-size: 1.8rem;
+                line-height: 2.2rem;
+                letter-spacing: .1rem;
+                text-transform: capitalize;
+                margin-bottom: 1rem;
+                transition: .25s color ease;
+                font-weight: 400;
+                cursor: pointer;
+                &:hover{
+                    color: $color-primary;
+                }
+              }
+              & .emotion{
+                  display: flex;
+                  justify-content: flex-start;
+                  align-items: center;
+                  column-gap: 1rem;
+                  &_like{
+                      background-color: $color-like;
+                      color: white;
+                      border: none;
+                      border-radius: .5rem;
+                      font-size: 1.2rem;
+                      line-height: 1.2rem;
+                      padding: .5rem;
+                      display: flex;
+                      column-gap: .5rem;
+                      align-items: center;
+                      &:hover{
+                          filter: brightness(90%);
+                      }
+                      & .yes{
+                          display: none;
+                      }
+                  }
+                  &_eys{
+                      padding: .5rem;
+                      display: flex;
+                      column-gap: .5rem;
+                      align-items: center;
+                      color: $color-title;
+                      background-color: rgba(128, 128, 128, 0.3);
+                      border-radius: .5rem;
+                      font-size: 1.3rem;
+                      & ion-icon{
+                          font-size: 1.5rem;
+                      }
+                  }
+                  &_start{
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      font-size: 1.4rem;
+                      letter-spacing: .2rem;
+                      & span:nth-child(2) {
+                          color: $color-remark;
+                      }
+                      &::after{
+                        content: '\f005';
+                        color: rgba(255, 255, 68, 1);
+                        transition: all .25s;
+                        font-family: 'Font Awesome 5 Free';
+                        font-weight: 900;
+                      }
+                  }
+                }
+                & p {
+                    color: $color-text;
+                    font-size: 1.4rem;
+                    line-height: 2.1rem;
+                    font-family: Roboto;
+                    letter-spacing: .1rem;
+                    font-weight: 400;
+                    margin-top: 2rem;
+                }
+           }
+           
+           &-img{
+               & img{
+                   max-width: 22rem;
+                   min-height: 14.7rem;
+               }
+           }
+       }
+    }
+}

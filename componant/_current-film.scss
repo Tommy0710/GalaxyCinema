@@ -1,0 +1,176 @@
+
+.current{
+    display: none;
+    transition: .25s all ease;
+    &_list{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(395px,1fr));
+        grid-auto-rows: minmax(265px, auto);
+        grid-gap: 20px 30px;
+        &-film{
+            & .img_list{
+               position: relative;
+               &::after{
+                   content: "C16";
+                   position: absolute;
+                   top: 0;
+                   left: 0;
+                   background-color: $color-primary;
+                   line-height: 20px;
+                   margin: 0 0 30px;
+                   color: white;
+                   padding: 0 5px;
+                   border-radius: .2rem;
+                   position: absolute;
+                   top: 50%;
+                   left: 50%;
+                   transform: translate(-50%,-150%);
+                   display: none;
+                   pointer-events: none;
+               }
+               &:hover::after{
+                   display: block;
+               } 
+                & img{
+                height: 264px;
+                width: 100%;
+                transition: all .4s ease;
+                object-fit: cover;
+                &:hover{
+                    filter: brightness(35%);
+                }
+            }   
+                & .btn-secondary{
+                cursor: pointer;
+                @include btn-film; 
+                transform: translate(-50%, 50%);
+                visibility: hidden;
+                padding: 15px 30px;
+                &:hover{
+                    background-color: $color-primary;
+                     border-color: $color-primary;
+                }
+            }
+            &:hover .btn-secondary{
+                visibility: visible;
+            }
+         }
+         & span{
+             color: #43464b;
+             font-weight: 400;
+             line-height: 30px;
+             text-transform: uppercase;
+             letter-spacing: .1rem;
+             font-size: 1.6rem;
+         }
+         & p{
+             color: #a0a3a7;
+             text-transform: uppercase;
+             letter-spacing: .1rem;
+             font-size: 1.6rem;
+             font-weight: 400;
+         }
+        }
+    }
+    
+}
+.btn-next{
+    display: flex;
+    gap: 10px;
+    margin-top: 30px;
+    background-color: transparent;
+    align-items: center;
+    border: 1px solid $color-primary;
+    color: #f69773;
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: .1rem;
+    line-height: 1.4rem;
+    padding: 15px 20px;
+    outline: none;
+    text-transform: uppercase;
+    margin-left: auto;
+    transition: .25s all ease;
+    &:hover{
+        color: white;
+        background-color: $color-primary;
+    }
+}
+.title{
+    display: flex;
+    margin-bottom: 35px;
+    &-left{
+        position: relative;
+        & .line{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 1px;
+            background-color: $color-primary;
+            transition: all .25s ease-out .15s;
+        }
+        display: flex;
+        flex: 1;
+        gap: 32px;
+        border-bottom: 1px #43464b65 solid;
+        
+        & .content{
+            @include title;
+            color: #43464b80;
+            padding: 10px 0;
+            font-weight: 400;
+            &:hover{
+                color: black;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                background-color: $color-primary;
+                width: 0%;
+                height: 2px;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                transition: .25s ease all;
+            }
+        }
+        & .content.activee{
+            color: black;
+            pointer-events: none;
+        }
+        & h5:hover::after{
+            width: 100%;
+        }
+    }
+    &-right{
+        flex: 1;
+        display: flex;
+        align-items: center;
+        padding-bottom: 14px;
+        gap: 14px;
+        & .icon_hotnew{
+            display: inline-block;
+            background: url(../img/ic_hotnews.png) no-repeat;
+            width: 121px;
+            height: 37px;
+            margin-left: auto;
+        }
+        & a{
+            color: #a0a3a7;
+            padding: 14px 0 0 0;
+            line-height: 16px;
+            font-weight: 400;
+            font-size: 1.6rem;
+            line-height: .1rem;
+        }
+    }
+}
+.active-list{
+    display: block;
+}
+.fadeInUp{
+    animation-name: fadeInUp;
+    animation-duration: .75s;
+    animation-timing-function: ease-out;
+}

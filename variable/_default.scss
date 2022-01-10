@@ -1,0 +1,89 @@
+html {
+box-sizing: border-box;
+font-family: 'Roboto', sans-serif;
+font-size: 10px;
+font-weight: 500;
+
+}
+body{
+    overflow-x: hidden;
+}
+*{
+margin: 0;
+padding: 0;
+}
+*,*:before,*:after {
+box-sizing: border-box;
+}
+::selection{
+    background: $color-primary;
+    color: white;
+}
+img{
+    user-select: none;
+    object-fit: cover;
+}
+select{
+    font-weight: 400;
+    letter-spacing: .05rem;
+    color: white;
+    animation-name: blink;
+    animation-duration: .5s;
+    animation-timing-function: ease-in;
+    font-family: 'Roboto', sans-serif;
+}
+option{
+    color: black;
+}
+input,
+textarea,
+select,
+button{
+outline: none;
+}
+input{
+line-height: normal;
+}
+label,
+button{
+cursor: pointer;
+}
+a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: .15rem;
+}
+ul{
+    list-style: none;
+}
+img {
+display: block;
+max-width: 100%;
+object-fit: cover;
+}
+h4,h5,p{
+    letter-spacing: .2rem;
+}
+ion-icon{
+    cursor: pointer;
+}
+.container{
+    padding: clamp(.5rem, 8.5vw, 13.5rem);
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+.default-width{
+    max-width: 1280px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.progress{
+    position: fixed;
+    z-index: 999999999999999;
+    top: 0;
+    width: var(--scroll);
+    height: 4px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background: linear-gradient(to right, #FEF4F1 5%,#F6936F 20%, $color-primary 75%)
+}

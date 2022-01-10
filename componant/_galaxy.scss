@@ -1,0 +1,21 @@
+.galaxy{
+    &_top{
+        @include title_main;
+    }
+    &_about{
+        color: $color-title;
+        font-size: 1.5rem;
+        line-height: 2.1rem;
+        font-weight: 400;
+    }
+    & [class=__bold],[class=__italic]{
+        color: black;
+        cursor: pointer;
+        &:hover{
+            color: $color-primary;
+        }
+    }  
+    & [class=__italic]{
+        color: $color-title;
+    }
+}

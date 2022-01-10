@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,500&display=swap"
+    rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="chose.css">
+  <link rel="stylesheet" href="animation.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header id="header">
+    <div class="container">
+      <div class="header">
+        <div class="header_top">
+<!--phần này có logo, search , đăng nhập-->
+          <div class="header_top-logo">
+          </div>
+          <form class="header_top-input" action="/action_page.php">
+            <input class="input_search" type="text" placeholder="Tìm tên phim, diễn viên...">
+            <ion-icon class="icon_search" name="search-outline" minlength="150px" maxlength="300px"></ion-icon>
+          </form>
+          <div class="header_top-users">
+            <div class="sideBar">
+            <!--menu responsive-->
+              <div class="menu_toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <!--res là responsive-->
+              <div class="search">
+                <input type="search" name="" id="search" placeholder="Tìm tên phim và diễn viên...">
+                <ion-icon class="icon-search-res" name="search-outline"></ion-icon>
+              </div>
+              <ul class="menu-res">
+                <li class="menu-item-res">
+                  <a href="#" class="menu-link-res">Mua vé</a>
+                </li>
+                <li class="menu-item-res">
+                  <div class="">
+                    <a href="#" class="menu-link-res film-btn">PHim</a>
+                    <ion-icon class="icon-res" name="chevron-down-outline"></ion-icon>
+                  </div>
+                  <ul class="menu-res">
+                    <li class="menu-item-res">
+                      <a href="#" class="menu-link-res">phim đang chiếu</a>
+                    </li>
+                    <li class="menu-item-res">
+                      <a href="#" class="menu-link-res">phim sắp chiếu</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item-res">
+                  <div class="">
+                    <a href="#" class="menu-link-res mov-btn">góc điện ảnh</a>
+                    <ion-icon class="icon-res" name="chevron-down-outline"></ion-icon>
+                  </div>
+                  <ul class="menu-res">
+                    <li class="menu-item-res">
+                      <a href="#" class="menu-link-res">Thể loại phim</a>
+                    </li>
+                    <li class="menu-item-res">
+                      <a href="#" class="menu-link-res">diễn viên</a>
+                    </li>
+                    <li class="menu-item-res">
+                      <a href="#" class="menu-link-res">đạo diễn</a>
+                    </li>
+                    <li class="menu-item-res">
+                      <a href="#" class="menu-link-res">bình luận phim</a>
+                    </li>
+                    <li class="menu-item-res">
+                      <a href="#" class="menu-link-res">blog điện ảnh</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item-res">
+                  <div class="">
+                    <a href="#" class="menu-link-res event-btn">sự kiện</a>
+                    <ion-icon class="icon-res" name="chevron-down-outline"></ion-icon>
+                  </div>
+                  <ul class="menu-res">
+                    <li class="menu-item-res">
+                      <a href="#" class="menu-link-res">ưu đãi</a>
+                    </li>
+                    <li class="menu-item-res">
+                      <a href="#" class="menu-link-res">phim hay tháng</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item-res">
+                  <a href="#" class="menu-link-res">rạp/giá vé</a>
+                </li>
+                <li class="menu-item-res">
+                  <a href="#" class="menu-link-res">hỗ trợ</a>
+                </li>
+                <li class="menu-item-res">
+                  <a href="#" class="menu-link-res">thành viên</a>
+                </li>
+              </ul>
+            </div>
+            <div class="logIn">
+              <ion-icon name="person-outline"></ion-icon>
+              <p class="nhap">Đăng nhập</p>
+            </div>
+            <div class="language">
+              <span>VN</span> <span>EN</span>
+            </div>
+          </div>
+        </div>
+      <!--menu lúc chưa res-->
+        <div class="top_menu">
+          <ul class="menu">
+            <li class="menu-item">
+              <a href="#" class="menu-link">Mua vé</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">phim</a>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            <!--mở rộng cho cái phim trên menu-->
+              <div class="list_film">
+                <h4 class="title">Phim đang chiếu</h4>
+                <div class="list_film-present">
+                  <div class="content_film">
+                    <a class="poster_watch" href="#"><img class="poster" src="./img/poster-phim-kinh-di.jpg" alt="film">
+                      <button class="btn-secondary"> MUA VÉ</button>
+                    </a>
+                    <h5>Take the monster</h5>
+                    <h5>giam cầm quỷ dữ</h5>
+                  </div>
+                  <div class="content_film">
+                    <a class="poster_watch" href="#"><img class="poster"
+                        src="https://www.galaxycine.vn/media/2021/12/31/1350x900_1640928700212.jpg" alt="film"><button
+                        class="btn-secondary"> MUA VÉ</button> </a>
+                    <h5>GHOSTBUSTER: AFTERLIFE</h5>
+                    <h5>BIỆT ĐỘI SĂN MA</h5>
+                  </div>
+                  <div class="content_film">
+                    <a class="poster_watch" href="#"><img class="poster"
+                        src="./img/poster-phim-thuong-lam-co-kich-thuoc-40-x-60-va-thuong-duoc-lam-duoi-dang-hop-den.jpg"
+                        alt="film"><button class="btn-secondary"> MUA VÉ</button> </a>
+                    <h5>Ant man</h5>
+                    <h5>người kiến</h5>
+                  </div>
+                  <div class="content_film">
+                    <a class="poster_watch" href="#"><img class="poster" src="./img/mau-poster-phim-viet-nam.jpg"
+                        alt="film"><button class="btn-secondary"> MUA VÉ</button> </a>
+                    <h5>god father</h5>
+                    <h5>bố già</h5>
+                  </div>
+                </div>
+                <h4 class="title">Phim sắp chiếu</h4>
+                <div class="list_film-present">
+                  <div class="content_film">
+                    <a class="poster_watch" href="#"><img class="poster"
+                        src="./img/venom-let-there-be-carnage-poster-1279326.jpg" alt="film"><button
+                        class="btn-secondary"> MUA VÉ</button> </a>
+                    <h5>Venom 2</h5>
+                    <h5>cuộc chiến sinh tử</h5>
+                  </div>
+                  <div class="content_film">
+                    <a class="poster_watch" href="#"><img class="poster"
+                        src="./img/LeagueofLegends_ArcanePosterWallpaper-6194df7a9e5a1.jpg" alt="film"><button
+                        class="btn-secondary"> MUA VÉ</button> </a>
+                    <h5>arcane</h5>
+                    <h5>arcane: giành lấy tự do</h5>
+                  </div>
+                  <div class="content_film">
+                    <a class="poster_watch" href="#"><img class="poster" src="./img/tải xuống.jpg" alt="film"><button
+                        class="btn-secondary"> MUA VÉ</button> </a>
+                    <h5>fast and furiuos 9</h5>
+                    <h5>nhanh và nguy hiểm 9</h5>
+                  </div>
+                  <div class="content_film">
+                    <a class="poster_watch" href="#"><img class="poster"
+                        src="./img/Sex-Education-Season-3-1024x577.jpeg" alt="film"><button class="btn-secondary"> MUA
+                        VÉ</button> </a>
+                    <h5>sex education 3</h5>
+                    <h5>giáo dục giới tính 3</h5>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">Góc điện ảnh</a>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+              <ul class="menu">
+                <li class="menu-item">
+                  <a href="#" class="menu-link">Thể loại phim</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class="menu-link">diễn viên</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class="menu-link">đạo diễn</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class="menu-link">bình luận phim</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class="menu-link">blog điện ảnh</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">Sự kiện</a>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+              <ul class="menu">
+                <li class="menu-item">
+                  <a href="#" class="menu-link">ưu đãi</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class="menu-link">phim hay tháng</a>
+                </li>
+              </ul>
+
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">Rạp/Giá vé</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">Hỗ trợ</a>
+            </li>
+            <li class="menu-item">
+              <a href="#" class="menu-link">Thành Viên</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div style="clear: both"></div>
+  <!-------------slick slider and chose(cái bảng chọn theo ngày theo phim theo rạp)------------>
+  <div class="input-and-slick">
+    <div class="input">
+      <div class="input_title">
+        <h5>MUA VÉ NHANH</h5>
+      </div>
+      <ul class="menu">
+        <li class="menu-item active">
+          <a href="#" class="menu-link active2">Theo phim</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu-link ">Theo ngày</a>
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu-link ">Theo rạp</a>
+        </li>
+      </ul>
+      <div class="chose visible">
+        <select class="list-choses film">
+          <option value="chọn phim" disabled selected>Chọn phim</option>
+          <option value="Venom: Let There Be Carnage">Venom: Let There Be Carnage</option>
+          <option value="Eternals">Eternals</option>
+          <option value="Shang-Chi And The Legend Of The Ten Rings">Shang-Chi And The Legend Of The Ten Rings</option>
+          <option value="Black Widow">Black Widow</option>
+          <option value="The Medium">The Medium</option>
+          <option value="Dune">Dune</option>
+          <option value="A Quiet Place 2">A Quiet Place 2</option>
+        </select>
+        <select class="list-choses where">
+          <option value="chọn rạp" disabled selected>Chọn rạp</option>
+          <option value="Galaxy Nguyễn Du">Galaxy Nguyễn Du</option>
+          <option value="Galaxy Tân Bình">Galaxy Tân Bình</option>
+          <option value="Galaxy Kinh Dương Vương">Galaxy Kinh Dương Vương</option>
+          <option value="Galaxy Quang Trung">Galaxy Quang Trung</option>
+          <option value="Galaxy Bến Tre">Galaxy Bến Tre</option>
+          <option value="Galaxy Đà Nẵng">Galaxy Đà Nẵng</option>
+        </select>
+        <select class="list-choses when">
+          <option value="chọn ngày" disabled selected>Chọn ngày</option>
+          <option value="thứ3">thứ 3, 07/12/2021</option>
+          <option value="thứ4">thứ 4, 08/12/2021</option>
+        </select>
+        <select class="list-choses option">
+          <option value="chọn suất" disabled selected>Chọn suất</option>
+          <option value="2d">14:30, 2D-phụ đề</option>
+          <option value="3d">16:20, 3D-lồng tiếng</option>
+        </select>
+      </div>
+      <div class="chose">
+        <select class="list-choses film">
+          <option value="chọn ngày" disabled selected>Chọn ngày</option>
+          <option value="thứ3">thứ 3, 07/12/2021</option>
+          <option value="thứ4">thứ 4, 08/12/2021</option>
+        </select>
+        <select class="list-choses where">
+          <option value="chọn rạp" disabled selected>Chọn rạp</option>
+          <option value="Galaxy Nguyễn Du">Galaxy Nguyễn Du</option>
+          <option value="Galaxy Tân Bình">Galaxy Tân Bình</option>
+          <option value="Galaxy Kinh Dương Vương">Galaxy Kinh Dương Vương</option>
+          <option value="Galaxy Quang Trung">Galaxy Quang Trung</option>
+          <option value="Galaxy Bến Tre">Galaxy Bến Tre</option>
+          <option value="Galaxy Đà Nẵng">Galaxy Đà Nẵng</option>
+        </select>
+        <select class="list-choses when">
+          <option value="chọn phim" disabled selected>Chọn phim</option>
+          <option value="Venom: Let There Be Carnage">Venom: Let There Be Carnage</option>
+          <option value="Eternals">Eternals</option>
+          <option value="Shang-Chi And The Legend Of The Ten Rings">Shang-Chi And The Legend Of The Ten Rings</option>
+          <option value="Black Widow">Black Widow</option>
+          <option value="The Medium">The Medium</option>
+          <option value="Dune">Dune</option>
+          <option value="A Quiet Place 2">A Quiet Place 2</option>
+        </select>
+        <select class="list-choses option">
+          <option value="chọn suất" disabled selected>Chọn suất</option>
+          <option value="2d">14:30, 2D-phụ đề</option>
+          <option value="3d">16:20, 3D-lồng tiếng</option>
+        </select>
+      </div>
+      <div class="chose">
+        <select class="list-choses film">
+          <option value="chọn rạp" disabled selected>Chọn rạp</option>
+          <option value="Galaxy Nguyễn Du">Galaxy Nguyễn Du</option>
+          <option value="Galaxy Tân Bình">Galaxy Tân Bình</option>
+          <option value="Galaxy Kinh Dương Vương">Galaxy Kinh Dương Vương</option>
+          <option value="Galaxy Quang Trung">Galaxy Quang Trung</option>
+          <option value="Galaxy Bến Tre">Galaxy Bến Tre</option>
+          <option value="Galaxy Đà Nẵng">Galaxy Đà Nẵng</option>
+        </select>
+        <select class="list-choses where">
+          <option value="chọn phim" disabled selected>Chọn phim</option>
+          <option value="Venom: Let There Be Carnage">Venom: Let There Be Carnage</option>
+          <option value="Eternals">Eternals</option>
+          <option value="Shang-Chi And The Legend Of The Ten Rings">Shang-Chi And The Legend Of The Ten Rings</option>
+          <option value="Black Widow">Black Widow</option>
+          <option value="The Medium">The Medium</option>
+          <option value="Dune">Dune</option>
+          <option value="A Quiet Place 2">A Quiet Place 2</option>
+        </select>
+        <select class="list-choses when">
+          <option value="chọn ngày" disabled selected>Chọn ngày</option>
+          <option value="thứ3">thứ 3, 07/12/2021</option>
+          <option value="thứ4">thứ 4, 08/12/2021</option>
+        </select>
+        <select class="list-choses option">
+          <option value="chọn suất" disabled selected>Chọn suất</option>
+          <option value="2d">14:30, 2D-phụ đề</option>
+          <option value="3d">16:20, 3D-lồng tiếng</option>
+        </select>
+      </div>
+      <button>
+        <h5>MUA VÉ</h5>
+      </button>
+    </div>
+    <!------------slick-slider------------->
+    <div class="slick">
+      <div class="slick_poster">
+        <div class="slick_poster-img">
+          <img src="https://www.galaxycine.vn/media/2021/12/10/mbf-1221-1042x347_1639130970149.jpg" alt="discound">
+        </div>
+        <ion-icon class="icon_watch" name="caret-forward-outline"></ion-icon>
+      </div>
+      <div class="slick_poster">
+        <div class="slick_poster-img">
+          <img src="https://www.galaxycine.vn/media/2021/11/30/2048x682_1638242147739.jpg" alt="enternals">
+        </div>
+        <ion-icon class="icon_watch" name="caret-forward-outline"></ion-icon>
+      </div>
+      <div class="slick_poster">
+        <div class="slick_poster-img">
+          <img src="https://www.galaxycine.vn/media/2021/12/6/2048wx682h_1638772370895.jpg" alt="arcane">
+        </div>
+        <ion-icon class="icon_watch" name="caret-forward-outline"></ion-icon>
+      </div>
+      <div class="slick_poster">
+        <div class="slick_poster-img">
+          <img src="https://www.galaxycine.vn/media/2021/12/10/2048x682_1639109603284.jpg" alt="arcane">
+        </div>
+        <ion-icon class="icon_watch" name="caret-forward-outline"></ion-icon>
+      </div>
+      <div class="slick_poster">
+        <div class="slick_poster-img">
+          <img src="https://www.galaxycine.vn/media/2021/11/23/2048x682_1637634992628.jpg" alt="shang-chi">
+        </div>
+        <ion-icon class="icon_watch" name="caret-forward-outline"></ion-icon>
+      </div>
+    </div>
+    <!--input-res(cái chọn theo ngày theo phim theo rạp mà là responsive)-->
+    <div class="input_res">
+      <div class="input_res-title">
+        <h5>MUA VÉ NHANH</h5>
+      </div>
+      <ul class="menu_res">
+        <li class="menu_res-item ">
+          <h6 class="menu_res-link hover">Theo phim</h6>
+        </li>
+        <li class="menu_res-item">
+          <h6 class="menu_res-link">Theo ngày</h6>
+        </li>
+        <li class="menu_res-item">
+          <h6 class="menu_res-link">Theo rạp</h6>
+        </li>
+      </ul>
+      <div class="chose-res visible2">
+        <select class="list-choses film list-choses-res">
+          <option value="chọn phim" disabled selected>Chọn phim</option>
+          <option value="Venom: Let There Be Carnage">Venom: Let There Be Carnage</option>
+          <option value="Eternals">Eternals</option>
+          <option value="Shang-Chi And The Legend Of The Ten Rings">Shang-Chi And The Legend Of The Ten Rings</option>
+          <option value="Black Widow">Black Widow</option>
+          <option value="The Medium">The Medium</option>
+          <option value="Dune">Dune</option>
+          <option value="A Quiet Place 2">A Quiet Place 2</option>
+        </select>
+        <select class="list-choses where list-choses-res">
+          <option value="chọn rạp" disabled selected>Chọn rạp</option>
+          <option value="Galaxy Nguyễn Du">Galaxy Nguyễn Du</option>
+          <option value="Galaxy Tân Bình">Galaxy Tân Bình</option>
+          <option value="Galaxy Kinh Dương Vương">Galaxy Kinh Dương Vương</option>
+          <option value="Galaxy Quang Trung">Galaxy Quang Trung</option>
+          <option value="Galaxy Bến Tre">Galaxy Bến Tre</option>
+          <option value="Galaxy Đà Nẵng">Galaxy Đà Nẵng</option>
+        </select>
+        <select class="list-choses when list-choses-res">
+          <option value="chọn ngày" disabled selected>Chọn ngày</option>
+          <option value="thứ3">thứ 3, 07/12/2021</option>
+          <option value="thứ4">thứ 4, 08/12/2021</option>
+        </select>
+        <select class="list-choses option list-choses-res">
+          <option value="chọn suất" disabled selected>Chọn suất</option>
+          <option value="2d">14:30, 2D-phụ đề</option>
+          <option value="3d">16:20, 3D-lồng tiếng</option>
+        </select>
+      </div>
+      <div class="chose-res">
+        <select class="list-choses film list-choses-res">
+          <option value="chọn ngày" disabled selected>Chọn ngày</option>
+          <option value="thứ3">thứ 3, 07/12/2021</option>
+          <option value="thứ4">thứ 4, 08/12/2021</option>
+        </select>
+        <select class="list-choses where list-choses-res">
+          <option value="chọn rạp" disabled selected>Chọn rạp</option>
+          <option value="Galaxy Nguyễn Du">Galaxy Nguyễn Du</option>
+          <option value="Galaxy Tân Bình">Galaxy Tân Bình</option>
+          <option value="Galaxy Kinh Dương Vương">Galaxy Kinh Dương Vương</option>
+          <option value="Galaxy Quang Trung">Galaxy Quang Trung</option>
+          <option value="Galaxy Bến Tre">Galaxy Bến Tre</option>
+          <option value="Galaxy Đà Nẵng">Galaxy Đà Nẵng</option>
+        </select>
+        <select class="list-choses when list-choses-res">
+          <option value="chọn phim" disabled selected>Chọn phim</option>
+          <option value="Venom: Let There Be Carnage">Venom: Let There Be Carnage</option>
+          <option value="Eternals">Eternals</option>
+          <option value="Shang-Chi And The Legend Of The Ten Rings">Shang-Chi And The Legend Of The Ten Rings</option>
+          <option value="Black Widow">Black Widow</option>
+          <option value="The Medium">The Medium</option>
+          <option value="Dune">Dune</option>
+          <option value="A Quiet Place 2">A Quiet Place 2</option>
+        </select>
+        <select class="list-choses option list-choses-res">
+          <option value="chọn suất" disabled selected>Chọn suất</option>
+          <option value="2d">14:30, 2D-phụ đề</option>
+          <option value="3d">16:20, 3D-lồng tiếng</option>
+        </select>
+      </div>
+      <div class="chose-res">
+        <select class="list-choses film list-choses-res">
+          <option value="chọn rạp" disabled selected>Chọn rạp</option>
+          <option value="Galaxy Nguyễn Du">Galaxy Nguyễn Du</option>
+          <option value="Galaxy Tân Bình">Galaxy Tân Bình</option>
+          <option value="Galaxy Kinh Dương Vương">Galaxy Kinh Dương Vương</option>
+          <option value="Galaxy Quang Trung">Galaxy Quang Trung</option>
+          <option value="Galaxy Bến Tre">Galaxy Bến Tre</option>
+          <option value="Galaxy Đà Nẵng">Galaxy Đà Nẵng</option>
+        </select>
+        <select class="list-choses where list-choses-res">
+          <option value="chọn phim" disabled selected>Chọn phim</option>
+          <option value="Venom: Let There Be Carnage">Venom: Let There Be Carnage</option>
+          <option value="Eternals">Eternals</option>
+          <option value="Shang-Chi And The Legend Of The Ten Rings">Shang-Chi And The Legend Of The Ten Rings</option>
+          <option value="Black Widow">Black Widow</option>
+          <option value="The Medium">The Medium</option>
+          <option value="Dune">Dune</option>
+          <option value="A Quiet Place 2">A Quiet Place 2</option>
+        </select>
+        <select class="list-choses when list-choses-res">
+          <option value="chọn ngày" disabled selected>Chọn ngày</option>
+          <option value="thứ3">thứ 3, 07/12/2021</option>
+          <option value="thứ4">thứ 4, 08/12/2021</option>
+        </select>
+        <select class="list-choses option list-choses-res">
+          <option value="chọn suất" disabled selected>Chọn suất</option>
+          <option value="2d">14:30, 2D-phụ đề</option>
+          <option value="3d">16:20, 3D-lồng tiếng</option>
+        </select>
+      </div>
+      <button class="btn-res">
+        <h5>MUA VÉ</h5>
+      </button>
+    </div>
+    <!--input-res-->
+  </div>
+  <!-------List-film------>
+  <section class="film default-width">
+    <div class="title">
+      <div class="title-left">
+        <h5 class="content activee">PHIM ĐANG CHIẾU</h5>
+        <h5 class="content">PHIM SẮP CHIẾU</h5>
+        <div class="line"></div>
+      </div>
+      <div class="title-right">
+        <i class="icon_hotnew"></i>
+        <a href="#">Arcane: cuộc chiến không hồi kết </a>
+      </div>
+    </div>
+    <div class="current active-list">
+      <div class="current_list fadeInUp">
+        <div class="current_list-film">
+          <div class="img_list">
+            <img src="https://www.galaxycine.vn/media/2021/11/30/2048x682_1638242147739.jpg"
+              alt="Sex-Education-Season-3-1024x577">
+            <button class="btn-secondary">MUA VÉ</button>
+          </div>
+          <span>enternal</span>
+          <p>chủng tộc bất tử</p>
+        </div>
+        <div class="current_list-film">
+          <div class="img_list">
+            <img src="https://www.galaxycine.vn/media/2021/12/10/2048x682_1639109603284.jpg"
+              alt="Sex-Education-Season-3-1024x577">
+            <button class="btn-secondary">MUA VÉ</button>
+          </div>
+          <span>VENOM</span>
+          <p>cuộc chiến sinh tử</p>
+        </div>
+        <div class="current_list-film">
+          <div class="img_list">
+            <img src="https://www.galaxycine.vn/media/2021/11/2/450_1635857325778.jpg"
+              alt="Sex-Education-Season-3-1024x577">
+            <button class="btn-secondary">MUA VÉ</button>
+          </div>
+          <span>the medium</span>
+          <p>âm hồn nhập xác</p>
+        </div>
+        <div class="current_list-film">
+          <div class="img_list">
+            <img src="./img/poster-phim-kinh-di.jpg" alt="Sex-Education-Season-3-1024x577">
+            <button class="btn-secondary">MUA VÉ</button>
+          </div>
+          <span>Shut in </span>
+          <p>giam cầm quỷ dữ</p>
+        </div>
+        <div class="current_list-film">
+          <div class="img_list">
+            <img src="./img/poster-ngang-film11h-1536x863.jpg" alt="Sex-Education-Season-3-1024x577">
+            <button class="btn-secondary">MUA VÉ</button>
+          </div>
+          <span>the race</span>
+          <p>chuyến đi vô tận</p>
+        </div>
+        <div class="current_list-film">
+          <div class="img_list">
+            <img src="./img/mau-poster-phim-viet-nam.jpg" alt="Sex-Education-Season-3-1024x577">
+            <button class="btn-secondary">MUA VÉ</button>
+          </div>
+          <span>god father</span>
+          <p>bố già</p>
+        </div>
+      </div>
+    </div>
+    <!--list phim sắp chiếu(lỡ đặt tên ngu rồi nhát sửa quá)-->
+    <div class="current">
+      <div class="current_list fadeInUp">
+        <div class="current_list-film">
+          <div class="img_list">
+            <img src="./img/spiderman.jpg" alt="Sex-Education-Season-3-1024x577">
+            <button class="btn-secondary">MUA VÉ</button>
+          </div>
+          <span>spiderman: no way home</span>
+          <p>người nhện: không còn nhà</p>
+        </div>
+        <div class="current_list-film">
+          <div class="img_list">
+            <img src="./img/vung-datchet.jpg" alt="Sex-Education-Season-3-1024x577">
+            <button class="btn-secondary">MUA VÉ</button>
+          </div>
+          <span>stake land 2</span>
+          <p>vùng đất chết phần 2</p>
+        </div>
+        <div class="current_list-film">
+          <div class="img_list">
+            <img src="./img/Sing-2-Banner.jpg" alt="Sex-Education-Season-3-1024x577">
+            <button class="btn-secondary">MUA VÉ</button>
+          </div>
+          <span>Sing 2</span>
+          <p>đấu trường âm nhạc</p>
+        </div>
+        <div class="current_list-film">
+          <div class="img_list">
+            <img src="https://www.galaxycine.vn/media/2021/12/31/1350x900_1640928700212.jpg"
+              alt="Sex-Education-Season-3-1024x577">
+            <button class="btn-secondary">MUA VÉ</button>
+          </div>
+          <span>GHOSTBUSTER: AFTERLIFE</span>
+          <p>BIỆT ĐỘI SĂN MA: CHUYỂN KIẾP</p>
+        </div>
+        <div class="current_list-film">
+          <div class="img_list">
+            <img src="./img/doraemon.jpg" alt="Sex-Education-Season-3-1024x577">
+            <button class="btn-secondary">MUA VÉ</button>
+          </div>
+          <span>doraemon: chuyến đi thám hiểm</span>
+          <p>thế giới phép thuật</p>
+        </div>
+        <div class="current_list-film">
+          <div class="img_list">
+            <img src="https://www.galaxycine.vn/media/2021/12/29/con-tin-1350x900_1640748690497.jpg"
+              alt="Sex-Education-Season-3-1024x577">
+            <button class="btn-secondary">MUA VÉ</button>
+          </div>
+          <span>HOSTAGE: MISSING CELEBRITY</span>
+          <p>CON TIN: NGÔI SAO MẤT TÍCH</p>
+        </div>
+      </div>
+    </div>
+    <button class="btn-next">
+      <p>XEM THÊM</p>
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </button>
+  </section>
+  <!-- phần đánh giá bình luận phim -->
+  <section class="remark default-width">
+    <div class="news">
+      <div class="comment-left">
+        <div class="comment">
+          <h3 class="comment_title">BÌNH LUẬN PHIM</h3>
+        </div>
+        <div class="comment_main comment_main-comment">
+          <div class="comment_main-img">
+            <img src="./img/eternal-remark.jpg" alt="enternal">
+          </div>
+          <div class="comment_main-content">
+            <h6>[Review] Eternals: Bộ phim tàn sát nhân vật nhất MCU!</h6>
+            <div class="emotion">
+              <button class="emotion_like">
+                <i class="far fa-thumbs-up like"></i>
+                <ion-icon class="yes" name="checkmark-outline"></ion-icon>
+                Thích 1,4K
+              </button>
+              <div class="emotion_eys">
+                <ion-icon name="eye-outline"></ion-icon>
+                1922
+              </div>
+              <div class="emotion_start">
+                <div><span>6,7</span><span>/10(155)</span></div>
+              </div>
+            </div>
+            <p>
+              Hãy ra rạp và thưởng thức trọn vẹn bom tấn ý nghĩa hàng đầu vũ trụ điện ảnh Marvel từ trước đến nay.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="comment-right">
+        <div class="comment">
+          <h3 class="comment_title">BLOG ĐIỆN ẢNH</h3>
+        </div>
+        <div class="comment_main comment_main-blog">
+          <div class="comment_main-img">
+            <img src="./img/eternal-remark.jpg" alt="enternal">
+          </div>
+          <div class="comment_main-content">
+            <h6>[Review] Eternals: Bộ phim tàn sát nhân vật nhất MCU!</h6>
+            <div class="emotion">
+              <button class="emotion_like">
+                <i class="far fa-thumbs-up like"></i>
+                <ion-icon class="yes" name="checkmark-outline"></ion-icon>
+                Thích 1,4K
+              </button>
+              <div class="emotion_eys">
+                <ion-icon name="eye-outline"></ion-icon>
+                1922
+              </div>
+              <div class="emotion_start">
+                <div><span>6,7</span><span>/10(155)</span></div>
+              </div>
+            </div>
+            <p>
+              Hãy ra rạp và thưởng thức trọn vẹn bom tấn ý nghĩa hàng đầu vũ trụ điện ảnh Marvel từ trước đến nay.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- video youtube( mở phim khi click vào nút pause ở click slider)  -->
+  <ion-icon class="icon-close fadeInDown2" name="close-circle-outline"></ion-icon>
+  <div class="ytb">
+<!-- phần này ở trong javascript video.js -->
+  </div>
+
+  <!------popUp-sign-in(khi click vào đăng nhập)------->
+  <div class="form shawdow">
+    <div class="box fadeInDown">
+      <div class="form_title">
+        <ion-icon class="close_icon" name="close-outline"></ion-icon>
+        <span class="sign-in both-sign changeColor ">ĐĂNG NHẬP
+          <div class="line2"></div>
+        </span>
+        <div class="line3"></div>
+        <span>/</span>
+        <span class="regist both-sign">ĐĂNG KÝ
+          <div class="line2"></div>
+        </span>
+      </div>
+      <!-- form đăng nhập -->
+      <form action="" class="box_form activeShow">
+        <div class="form_warn">
+          Vui lòng đăng nhập trước khi mua vé để tích luỹ điểm, cơ hội nhận thêm nhiều ưu đãi từ chương trình thành viên
+          Galaxy Cinema.
+        </div>
+        <div class="form_email main">
+          <input id="email" name="email" type="email" placeholder="Email" class="form-control">
+          <span class="form-message"></span>
+        </div>
+        <div class="form-group main">
+          <input id="password" name="password" type="password" placeholder="Password" class="form-control">
+          <ion-icon class="icon-eye" name="eye-off-outline"></ion-icon>
+          <!--<ion-icon name="eye-off-outline"></ion-icon> -->
+          <span class="form-message"></span>
+        </div>
+        <div class="forgot">
+          <a href="">Quên mật khẩu?</a>
+        </div>
+        <button class="btn-sign">đăng nhập</button>
+      </form>
+      <!-- form đăng ký -->
+      <form action="" class="box_form">
+        <div class="form_name main">
+          <input id="name" name="name" type="text" placeholder="Họ tên" class="name">
+          <span class="form-message"></span>
+        </div>
+        <div class="specific">
+          <div class="form-number main">
+            <input type="text" name="phoneNumber" class="phone_number" placeholder="Số điện thoại">
+            <span class="form-message"></span>
+          </div>
+          <div class="form-sex main">
+            <select id="sex" name="sex">
+              <option value=""disabled selected>Giới tính</option>
+              <option value="Nam">Nam</option>
+              <option value="Nữ">Nữ</option>
+              <option value="Khác">Khác</option>
+            </select>
+            <span class="form-message"></span>
+          </div>
+        </div>
+        <div class="form_email main">
+          <input id="email2" name="email" type="email" placeholder="Email" class="form-control">
+          <span class="form-message"></span>
+        </div>
+        <div class="form-group2">
+          <div class="form_password main">
+            <input id="password2" name="password" type="password" placeholder="Password" class="form-control">
+            <ion-icon class="icon-eye" name="eye-off-outline"></ion-icon>
+            <span class="form-message"></span>
+          </div>
+          <div class="form_password-repeat main">
+            <div class="form-password">
+              <input id="password2_repeat" name="password" type="password" placeholder="Nhập lại Password" class="form-control">
+              <ion-icon class="icon-eye" name="eye-off-outline"></ion-icon>
+              <span class="form-message"></span>
+            </div>
+          </div>
+        </div>
+        <div class="form_address main">
+          <input id="address" name="address" type="text" placeholder="Địa chỉ" class="address">
+          <span class="form-message"></span>
+        </div>
+        <div class="form_date main">
+          <input id="date" name="date" type="date" class="date">
+          <span class="form-message"></span>
+        </div>
+
+        <h4 class="policy">Tôi đã đọc và đồng ý với <a href="chinhsach.html">CHÍNH SÁCH</a> của chương trình.</h4>
+        <button class="btn-sign">đăng ký</button>
+      </form>
+    </div>
+  </div>
+
+  <!--nav-progress-->
+  <div class="progress"></div>
+  <!--khuyến mãi -->
+  <section class="discound default-width">
+    <div class="discound_top">
+      <h3 class="discound_top_title">TIN KHUYẾN MÃI</h3>
+    </div>
+    <div class="discound_bottom">
+      <div class="discound_bottom-tag">
+        <a class="tag tag_1">
+          <img src="https://www.galaxycine.vn/media/2021/1/18/300x450_1610956359573.png" alt="">
+        </a>
+        <div class="discound_bottom-hover">
+          <h3>GALAXY CINEMA TRI ÂN THÀNH VIÊN</h3>
+          &nbsp;
+          <button class="btn-next">
+            <p>CHI TIẾT</p>
+          </button>
+        </div>
+      </div>
+      <div class="discound_bottom-tag">
+        <a class="tag tag_2">
+          <img src="https://www.galaxycine.vn/media/2021/12/24/300x450_1640317843969.jpg" alt="">
+        </a>
+        <div class="discound_bottom-hover">
+          <h3>NGÀY TRI ÂN CỦA GALAXY CINEMA-NGÀY THỨ 2 ĐẦU...</h3>
+          <span>Từ lâu, chương trình Ngày Tri Ân Nhằm tạo điều kiện thuận lợi hơn cho các khách hàng thả ga xem phim đã trở nên quen thuộc với các khách hàng thân yêu của Galaxy Cinema.</span>
+          <button class="btn-next">
+            <p>CHI TIẾT</p>
+          </button>
+        </div>
+      </div>
+      <div class="discound_bottom-tag">
+        <a class="tag tag_3">
+          <img src="https://www.galaxycine.vn/media/2021/12/10/mbf-1221-1200x1800---copy_1639130615423.jpg" alt="">
+        </a>
+        <div class="discound_bottom-hover">
+          <h3>TRÙM DATA GALAXY-GÓI CƯỚC SIÊU... </h3>
+          <span>Trùm Data GALAXY là gói cước siêu khuyến mại với sự hợp tác đặc biệt giữa MOBIPHONE và GALAXY</span>
+          <button class="btn-next">
+            <p>CHI TIẾT</p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="galaxy default-width">
+    <div class="galaxy_top">
+      <h3 class="discound_top_title">GALAXY CINEMA</h3>
+    </div>
+    <h6 class="galaxy_about">
+       <strong class="__bold">Galaxy Cinema</strong> là một trong những công ty tư nhân đầu tiên về điện ảnh được thành lập từ năm 2003, đã khẳng định thương hiệu là 1 trong 10 địa điểm vui chơi giải trí được yêu thích nhất. Ngoài hệ thống rạp chiếu phim hiện đại, thu hút hàng triệu lượt người đến xem, <strong class="__bold">Galaxy Cinema</strong> còn hấp dẫn khán giả bởi không khí thân thiện cũng như chất lượng dịch vụ hàng đầu.<br>
+       <br>
+        Đến website <i class="__italic">galaxycine.vn</i>, khách hàng sẽ dễ dàng tham khảo các <i class="__italic">phim hay nhất</i>, <i class="__italic">phim mới nhất</i> đang chiếu hoặc sắp chiếu luôn được cập nhật thường xuyên.<i class="__italic"> Lịch chiếu</i> tại tất cả hệ thống <i class="__italic">rạp chiếu phim</i> của <strong class="__bold">Galaxy Cinema</strong> cũng được cập nhật đầy đủ hàng ngày hàng giờ trên trang chủ.<br>
+       <br>
+        Từ vũ trụ điện ảnh Marvel, người hâm mộ sẽ có cuộc tái ngộ với Người Nhện qua Spider-Man: No Way Home hoặc Doctor Strange 2. Ngoài ra 007: No Time To Die, Turning Red, Minions: The Rise Of Gru..., là những tác phẩm hứa hẹn sẽ gây bùng nổ phòng vé trong thời gian tới.<br>
+       <br>
+        Giờ đây đặt vé tại <strong class="__bold">Galaxy Cinema</strong> càng thêm dễ dàng chỉ với vài thao tác vô cùng đơn giản. Để mua vé, hãy vào tab Mua vé. Quý khách có thể chọn Mua vé theo phim, theo rạp, hoặc theo ngày. Sau đó, tiến hành mua vé theo các bước hướng dẫn. Chỉ trong vài phút, quý khách sẽ nhận được tin nhắn và email phản hồi Đặt vé thành công của <strong class="__bold">Galaxy Cinema</strong>. Quý khách có thể dùng tin nhắn lấy vé tại quầy vé của <strong class="__bold">Galaxy Cinema</strong> hoặc quét mã QR để một bước vào rạp mà không cần tốn thêm bất kỳ công đoạn nào nữa.<br>
+       <br>
+        Nếu bạn đã chọn được <i class="__italic">phim hay</i> để xem, hãy đặt vé cực nhanh bằng box Mua Vé Nhanh ngay từ <i class="__italic">Trang Chủ</i>. Chỉ cần một phút, tin nhắn và email phản hồi của <strong class="__bold">Galaxy Cinema</strong> sẽ gửi ngay vào điện thoại và hộp mail của bạn.<br>
+       <br>
+        Nếu chưa quyết định sẽ xem phim mới nào, hãy tham khảo các bộ phim hay trong mục Phim Đang Chiếu cũng như Phim Sắp Chiếu tại rạp chiếu phim bằng cách vào mục Bình Luận Phim ở Góc Điện Ảnh để đọc những bài bình luận chân thật nhất, tham khảo và cân nhắc. Sau đó, chỉ việc đặt vé bằng box Mua Vé Nhanh ngay ở đầu trang để chọn được suất chiếu và chỗ ngồi vừa ý nhất.
+       <br>
+       <br>
+        <strong class="__bold">Galaxy Cinema</strong> luôn có những chương trình <i class="__italic">khuyến mãi, ưu đãi</i>, quà tặng vô cùng hấp dẫn như giảm giá vé, tặng vé xem phim miễn phí, tặng Combo, tặng quà phim…  dành cho các khách hàng.<br>
+        <br>
+         Trang web galaxycine.vn còn có mục Góc Điện Ảnh - nơi lưu trữ dữ liệu về phim, diễn viên và đạo diễn, những bài viết chuyên sâu về điện ảnh, hỗ trợ người yêu phim dễ dàng hơn trong việc lựa chọn phim và bổ sung thêm kiến thức về điện ảnh cho bản thân. Ngoài ra, vào mỗi tháng, <strong class="__bold">Galaxy Cinema</strong> cũng giới thiệu các phim sắp chiếu hot nhất trong mục <i class="__italic">Phim Hay Tháng</i>.<br>
+         <br>
+          Hiện nay, <strong class="__bold">Galaxy Cinema</strong> đang ngày càng phát triển hơn nữa với các chương trình đặc sắc, các khuyến mãi hấp dẫn, đem đến cho khán giả những bộ phim bom tấn của thế giới và Việt Nam nhanh chóng và sớm nhất.
+    </h6>
+  </section>
+
+
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="./js/slick.js"></script>
+  <script src="./js/menu.js"></script>
+  <script src="./js/input.js"></script>
+  <script src="./js/video.js"></script>
+  <script src="./js/current-future.js"></script>
+  <script src="./js/form-input.js"></script>
+  <script src="./js/check-sign.js"></script>
+  <script src="./js/input-res.js"></script>
+  <script src="./js/lineProgress.js"></script>
+  <script src="./js/remark.js"></script>
+
+<!-- thư viện form-validate của f8 mình có thêm vào 1 số tính năng-->
+  <script>
+    Validator({
+      form: '.box_form',
+      errorSelector: '.form-message',
+      formGroupSelector: '.main',
+      rules: [
+// form đăng nhập 
+        Validator.isRequired('#email'),
+        Validator.isEmail('#email'),
+        Validator.isRequired('#password'),
+        Validator.minLength('#password', 8),
+// form đăng ký
+        Validator.isRequired('#name'),
+        Validator.isRequired('.phone_number'),
+        Validator.isRequired('#sex'),
+        Validator.isRequired('#email2'),
+        Validator.isRequired('#address'),
+        Validator.isEmail('#email2'),
+        Validator.isRequired('#password2'),
+        Validator.minLength('#password2', 8),
+        Validator.samePassword('#password2_repeat', function() {
+                    return document.querySelector('#password2').value;
+                  }, 'mật khẩu nhập lại không chính xác'),
+                  
+      ],
+      // khi submit vào button trong form
+      onsubmit: function (data) {
+        console.log(data)
+      }
+    })
+    
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+.list_film{
+    position: absolute;
+    z-index: 1000;
+    top: 101.5%;
+    left: 0;
+    background-color: black;
+    width: 1045px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 3rem;
+    padding-bottom: 0rem;
+    display: none;
+    .title{
+        cursor: pointer;
+        position: relative;
+        margin-bottom: 2rem;
+        margin-top: -2rem;
+        transition: .2s color ease;
+        overflow: hidden;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: auto;
+            width: 13rem;
+            height: .2rem;
+            transform: translateX(-8rem);
+            background-color:  #f26b38;
+            transition: .3s all linear;
+        }
+        &:hover::after{
+            transform: translateX(8rem);
+        }
+        &:hover{
+            color: #f26b38;
+        }
+        
+    }
+    &-present{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 30px;
+        .content_film{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            .poster_watch{
+                position: relative;
+                & .btn-secondary{
+                 @include btn-film;
+                 visibility: hidden; 
+                 &:hover{
+                     background-color: $color-primary;
+                     border-color: $color-primary;
+                 }
+                }
+                &:hover .btn-secondary{
+                    visibility: visible;
+                }
+                
+            }
+            .poster{
+                height: 13.8rem;
+                width: min(22.3, 18vw);
+                background-size: cover;
+                transition: .3s all ease;
+                &:hover{
+                    filter: brightness(65%);
+                }
+            }
+            & h5{
+                margin-top: -1rem;
+            }
+            & h5:nth-of-type(2){
+                color: grey;
+                margin-top: -2.5rem;
+            }
+        }
+    }
+}

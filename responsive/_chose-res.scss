@@ -1,0 +1,74 @@
+.input_res{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 30px;
+    padding: 15px 15px 50px;
+    display: none;
+    & .chose-res{
+        margin-bottom: 20px;
+        display: none;
+        & .list-choses-res{
+            border: solid 1px $color-text;
+            color: rgba(67, 70, 75, 0.85);
+        }
+    }
+    & .menu_res{
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        &-item{
+            flex: 1;
+            background-color: #e9edf1;
+            border: 1px solid #ced0da;
+            text-align: center;
+             font-size: 22px;
+             cursor: pointer;
+        }
+        &-link{
+            color: $color-title;
+            opacity: .8;
+            letter-spacing: .1rem;
+            line-height: 40px;
+        }
+    }
+    & .btn-res{
+        background-color: $color-primary;
+        color: white;
+        border: none;
+        padding: 12px 0;
+        font-size: 1.8rem;
+        font-weight: 500;
+        & h5{
+            font-weight: 500
+        }
+    }
+    &-title{
+        @include title;
+        color: #43464b;
+        font-size: 22px;
+        padding: 10px 0;
+        & h5{
+            letter-spacing: 0em;
+            font-weight: 500;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            background-color: $color-primary;
+            width: 5rem;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+        }
+    }
+}
+.chose-res.visible2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.menu_res-link.hover{
+    color: $color-primary;
+}

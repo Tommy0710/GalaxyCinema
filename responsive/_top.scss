@@ -1,0 +1,86 @@
+@media screen and (max-width: 1180px){
+    .container{
+        padding: 0 4rem;
+    }
+    .menu .menu-item a{
+        font-size: 90%;
+    }
+    
+}
+
+@media screen and (max-width: 990px){
+    .container{
+        padding: 0 2rem;
+    }
+    .top_menu{
+        display: none;
+    }
+    
+    .header_top-users{
+        margin-right: 2rem;
+    }
+    .sideBar{
+        display: block;
+    }
+   .header_top-logo{
+       min-height: 8rem;
+       width: 14rem;
+       transform: scale(.8);
+       background-image: url(../img/galaxy_short.png);
+       background-size: cover;
+   }
+   .header_top-input{
+       display: none;
+   }
+}
+
+@media screen and (max-width: 600px){
+    .header_top-users .language{
+        display: none;
+    }
+    .box_form{
+        width: 34rem;
+    }
+    .discound{
+        &_bottom{
+            justify-content: center;
+            &-tag{
+                flex-basis: 200px;
+            }
+        }
+    }
+    .form{
+        & .box {
+            padding: 25px 25px 40px 25px;
+            & .form_title{
+                & ion-icon{
+                    top: 0;
+                    right: -10px;
+                }
+                & .both-sign,span{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .remark{
+        margin-top: 10rem;
+        & .news{
+            flex-direction: column;
+           & .comment-left,.comment-right{
+               & .comment_main{
+                   flex-direction: column;
+                   & .colums{
+                       flex-direction: column;
+                   }
+                   &-img{
+                    margin-bottom: 1rem;
+                    & img{
+                     max-width: 100% !important;
+                    }
+                }
+               }
+           }
+        }
+    }
+}

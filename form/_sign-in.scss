@@ -1,0 +1,172 @@
+
+.fadeInDown{
+    animation-name: fadeInDown;
+    animation-duration: .6s;
+    animation-timing-function: ease-out;
+    animation-delay: .25s;
+    animation-fill-mode: both;
+}
+
+.form{
+    inset: 0;
+    overflow: hidden;
+    z-index: 99999999999;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: shawdow;
+    animation-duration: .25s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: both;
+    display: none;
+    & .box {
+        background-color: white;
+        max-width: 520px;
+        min-height: 435px;
+        padding: 30px 30px 45px 30px;
+        box-shadow: 0 7px 10px 1px rgba(0, 0, 0, 0.3);
+        & .form-message{
+            color: red;
+            font-size: 1.3rem;
+            pointer-events: none;
+            user-select: none;
+        }
+        & .box_form{
+            & .main{
+                position: relative;
+                margin-bottom: $padding-input;
+                & .icon-eye{
+                    position: absolute;
+                    cursor: pointer;
+                    top: 0;
+                    right: 0;
+                    transform: translate(-1.4rem, 1.5rem);
+                    font-size: 2rem;
+                   color: $color-text;
+                }
+                & input{
+  
+                    width: 100%;
+                    padding: $padding-input;
+                    padding-left: 1.5rem;
+                    border: 1px #a0a3a785 solid;
+                    &:hover{
+                        border: 1px solid $color-primary;
+                    }
+                    &::-webkit-input-placeholder{
+                        color: #a0a3a7;
+                    }
+                }
+            }
+        }
+        & .form_warn{
+           color: #a0a3a7;
+           font-weight: 400;
+           font-size: 14px;
+           line-height: 20px;
+           width: 100%;
+           margin-bottom: 26px;
+        }
+        & .form_title{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 21px;
+            margin-bottom: 30px;
+            position: relative;
+            & ion-icon{
+                position: absolute;
+                font-size: 4rem;
+                top: 0;
+                right: 0;
+                color: #a0a3a7b0;
+                &:hover{
+                    color: #43464b;
+                }
+            }
+            
+            & .both-sign,span{
+                @include title;
+                color: #43464b80;
+                font-size: 28px;
+                line-height: 50px;
+                padding-top: 10px;
+                position: relative;
+                font-weight: 400;
+            }
+            & .both-sign{
+                border-bottom: 2px solid transparent;
+            }
+            & .sign-in.changeColor{
+                color: $color-primary;
+                pointer-events: none;
+            }
+            & .regist.changeColor{
+                color: $color-primary;
+                pointer-events: none;
+            }
+        }
+    }
+}
+.line.line-stay{
+    animation: line .25s ease 0s 1 normal forwards;
+}
+.close{
+   animation-name: close;
+   animation-duration: .5s;
+   animation-fill-mode: forwards;
+}
+.forgot{
+    margin-top: 20px !important;
+    & a{
+        color: #a0a3a7;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+}
+.btn-sign{
+    width: 100%;
+    text-align: center;
+    background-color: $color-primary;
+    color: white;
+    font-size: 14px;
+    letter-spacing: .1rem;
+    padding: 15px 0;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 27px;
+    &:hover{
+        filter: brightness(120%);
+    }
+}
+.line2{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 1.5px;
+    width: 0%;
+    transform: translateX(-50%) translateY(2.5px);
+    background-color: $color-primary;
+    transition: .25s width ease;
+}
+
+.form_title span:hover > .line2{
+    width: 100%;
+}
+.line3{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $color-primary;
+    height: 1.5px;
+    width: 0%;
+    transition: all .25s ease;
+}
+// #Email:focus + .label,
+// #Password:focus + .label{
+//     color: black;
+// }

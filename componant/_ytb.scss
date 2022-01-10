@@ -1,0 +1,59 @@
+.fadeInDown2{
+    animation-name: fadeInDown2;
+    animation-duration: .4s;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+}
+.ytb{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 99999999;
+    &::after{
+         content: "";
+         position: absolute;
+         inset: 0;
+         z-index: -1;
+         background-color: rgba(0, 0, 0, 0.3);
+         transform: scale(20);
+    }
+    & h4{
+        padding: 20px 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $color-title;
+        font-size: 1.8rem;
+        font-weight: 400;
+        background-color: white;
+        transform: translateY(-500px);
+    }
+
+    &_traler{
+        padding: 15px;
+        background-color: white;
+        border: 1px solid $color-text;
+        & iframe{
+            width: 740px;
+            height: 420px;
+        }
+    }
+}
+.ytb.visible{
+    display: block;
+}
+.icon-close{
+    display: none;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    color: white;
+    font-size: 3rem;
+    z-index: 999999999999;
+    &:hover{
+        color: $color-title;
+    }
+}
+

@@ -1,0 +1,60 @@
+$color-primary: #f26b38;
+$color-text: rgb(161, 161, 161);
+$color-title: #43464b;
+$color-remark: #4f494a;
+$color-like: rgb(24, 119, 242);
+$gap: 15px;
+$padding-input: 14px;
+@mixin btn-film {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);  
+     background-color: transparent;
+     border: 1px solid white;
+     padding: 10px 16px;
+     font-size: 14px;
+     line-height: 14px;
+     color: white;
+     letter-spacing: .1rem;
+     font-weight: 400;
+}
+@mixin title {
+    color: $color-title;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    position: relative;
+    cursor: pointer;
+}
+@mixin title_main{
+    width: fit-content;
+    margin-bottom: 3rem;
+    &_title{
+      @include title;
+     line-height: 2rem;
+     transition: .25s color ease-in;
+    }
+    position: relative;
+    padding-bottom: .5rem;
+    overflow: hidden;
+    &:hover .comment_title{
+     color: $color-primary;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: .3rem;
+        width: 100%;
+        transform: translateX(-60%);
+        background-color: $color-primary;
+        transition: all .25s ease-out;
+    }
+    &:hover::after{
+        transform: translateX(0);
+    }
+}
+        

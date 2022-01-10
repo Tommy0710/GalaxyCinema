@@ -1,0 +1,61 @@
+.top_menu{
+   width: 100%;
+   margin: 0 auto;
+   position: relative;
+   z-index: 1000;
+}
+.top_menu::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -10.7%;
+    width: 120vw;
+    height: 5rem;
+    background-color: rgb(0, 0, 0);
+    z-index: -1;
+}
+.top_menu .menu .menu-item{
+    text-transform: uppercase;
+    background-color: black;
+    width: clamp(130px, 11.5vw, 178px);
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    color: white;
+    font-size: 14px;
+    position: relative;
+}
+.top_menu > .menu > .menu-item:not(:last-child):after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 25%;
+    width: 1px;
+    background-color: white;
+    transform: translateY(17px);
+}
+.menu-link,ion-icon{
+    transition: .3s ease color;
+    display: inline-block;
+}
+.top_menu .menu .menu-item .menu-link:hover,
+.top_menu .menu .menu-item .menu-link:hover ~ ion-icon{
+    color: #f26b38;
+}
+.top_menu .menu .menu-item > .menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(50px);
+    display: none;
+}
+.top_menu .menu .menu-item:hover .list_film{
+    display: flex;
+}
+.top_menu .menu .menu-item:hover > .menu{
+    display: inline-block;
+}
+
+

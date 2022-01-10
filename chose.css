@@ -1,0 +1,76 @@
+.input{
+    font-family: 'Roboto', sans-serif;
+    padding: 0 12px;
+    background-color: rgba(0, 0, 0, 0.7);
+    max-width: 356px;
+    min-height: 372px;
+    display: flex;
+    flex-direction: column;
+}
+.input .input_title h5{
+    width: fit-content;
+    font-weight: 400;
+    background-color: #f26b38;
+    color: white;
+    font-size: 16px;
+    padding: 12px 26px;
+    margin-left: -12px;
+    letter-spacing: .1rem;
+}
+.input > button{
+    outline: none;
+    border: none;
+    font-weight: 400;
+    width: fit-content;
+    background-color: #f26b38;
+    color: white;
+    font-size: 14px;
+    padding: 12px 15px;
+    letter-spacing: .1rem;
+    margin-top: 14px;
+    margin-left: auto;
+}
+.input > .menu{
+    width: 100%;
+    display: flex;
+    margin-bottom: 21px;
+}
+.input > .menu .menu-item{
+    color: white;
+    border-bottom: 2px white solid;
+}
+.input > .menu .menu-item:hover{
+    
+    border-bottom: 2px #f26b38 solid;
+}
+.input > .menu .menu-item:hover > .menu-link{
+    color: #f26b38;
+}
+.input > .menu .menu-item.active{
+    border-bottom: 2px #f26b38 solid;
+}
+
+.input > .menu .menu-item .menu-link{
+    color: white;
+    font-size: 14px;
+    line-height: 40px;
+    letter-spacing: .06rem;
+    padding: 0 20px;
+}
+.chose{
+    flex-direction: column;
+    row-gap: 15px;
+    color: white;
+    display: none;
+}
+.list-choses{
+    border: none;
+    background-color: rgba(255, 255, 255, 0.35);
+    padding: 11px 20px 11px 12px;
+}
+.input > .menu .menu-item .menu-link.active2{
+    color: #f26b38;
+}
+.chose.visible{
+    display: flex;
+}

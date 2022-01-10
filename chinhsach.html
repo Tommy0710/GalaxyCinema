@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+    <title>Document</title>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+          <div class="header">
+            <div class="header_top">
+    <!--phần này có logo, search , đăng nhập-->
+              <div class="header_top-logo">
+              </div>
+              <form class="header_top-input" action="/action_page.php">
+                <input class="input_search" type="text" placeholder="Tìm tên phim, diễn viên...">
+                <ion-icon class="icon_search" name="search-outline" minlength="150px" maxlength="300px"></ion-icon>
+              </form>
+              <div class="header_top-users">
+                <div class="sideBar">
+                <!--menu responsive-->
+                  <div class="menu_toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <!--res là responsive-->
+                  <div class="search">
+                    <input type="search" name="" id="search" placeholder="Tìm tên phim và diễn viên...">
+                    <ion-icon class="icon-search-res" name="search-outline"></ion-icon>
+                  </div>
+                  <ul class="menu-res">
+                    <li class="menu-item-res">
+                      <a href="#" class="menu-link-res">Mua vé</a>
+                    </li>
+                    <li class="menu-item-res">
+                      <div class="">
+                        <a href="#" class="menu-link-res film-btn">PHim</a>
+                        <ion-icon class="icon-res" name="chevron-down-outline"></ion-icon>
+                      </div>
+                      <ul class="menu-res">
+                        <li class="menu-item-res">
+                          <a href="#" class="menu-link-res">phim đang chiếu</a>
+                        </li>
+                        <li class="menu-item-res">
+                          <a href="#" class="menu-link-res">phim sắp chiếu</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-res">
+                      <div class="">
+                        <a href="#" class="menu-link-res mov-btn">góc điện ảnh</a>
+                        <ion-icon class="icon-res" name="chevron-down-outline"></ion-icon>
+                      </div>
+                      <ul class="menu-res">
+                        <li class="menu-item-res">
+                          <a href="#" class="menu-link-res">Thể loại phim</a>
+                        </li>
+                        <li class="menu-item-res">
+                          <a href="#" class="menu-link-res">diễn viên</a>
+                        </li>
+                        <li class="menu-item-res">
+                          <a href="#" class="menu-link-res">đạo diễn</a>
+                        </li>
+                        <li class="menu-item-res">
+                          <a href="#" class="menu-link-res">bình luận phim</a>
+                        </li>
+                        <li class="menu-item-res">
+                          <a href="#" class="menu-link-res">blog điện ảnh</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-res">
+                      <div class="">
+                        <a href="#" class="menu-link-res event-btn">sự kiện</a>
+                        <ion-icon class="icon-res" name="chevron-down-outline"></ion-icon>
+                      </div>
+                      <ul class="menu-res">
+                        <li class="menu-item-res">
+                          <a href="#" class="menu-link-res">ưu đãi</a>
+                        </li>
+                        <li class="menu-item-res">
+                          <a href="#" class="menu-link-res">phim hay tháng</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="menu-item-res">
+                      <a href="#" class="menu-link-res">rạp/giá vé</a>
+                    </li>
+                    <li class="menu-item-res">
+                      <a href="#" class="menu-link-res">hỗ trợ</a>
+                    </li>
+                    <li class="menu-item-res">
+                      <a href="#" class="menu-link-res">thành viên</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="logIn">
+                  <ion-icon name="person-outline"></ion-icon>
+                  <p class="nhap">Đăng nhập</p>
+                </div>
+                <div class="language">
+                  <span>VN</span> <span>EN</span>
+                </div>
+              </div>
+            </div>
+          <!--menu lúc chưa res-->
+            <div class="top_menu">
+              <ul class="menu">
+                <li class="menu-item">
+                  <a href="#" class="menu-link">Mua vé</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class="menu-link">phim</a>
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                <!--mở rộng cho cái phim trên menu-->
+                  <div class="list_film">
+                    <h4 class="title">Phim đang chiếu</h4>
+                    <div class="list_film-present">
+                      <div class="content_film">
+                        <a class="poster_watch" href="#"><img class="poster" src="./img/poster-phim-kinh-di.jpg" alt="film">
+                          <button class="btn-secondary"> MUA VÉ</button>
+                        </a>
+                        <h5>Take the monster</h5>
+                        <h5>giam cầm quỷ dữ</h5>
+                      </div>
+                      <div class="content_film">
+                        <a class="poster_watch" href="#"><img class="poster"
+                            src="https://www.galaxycine.vn/media/2021/12/31/1350x900_1640928700212.jpg" alt="film"><button
+                            class="btn-secondary"> MUA VÉ</button> </a>
+                        <h5>GHOSTBUSTER: AFTERLIFE</h5>
+                        <h5>BIỆT ĐỘI SĂN MA</h5>
+                      </div>
+                      <div class="content_film">
+                        <a class="poster_watch" href="#"><img class="poster"
+                            src="./img/poster-phim-thuong-lam-co-kich-thuoc-40-x-60-va-thuong-duoc-lam-duoi-dang-hop-den.jpg"
+                            alt="film"><button class="btn-secondary"> MUA VÉ</button> </a>
+                        <h5>Ant man</h5>
+                        <h5>người kiến</h5>
+                      </div>
+                      <div class="content_film">
+                        <a class="poster_watch" href="#"><img class="poster" src="./img/mau-poster-phim-viet-nam.jpg"
+                            alt="film"><button class="btn-secondary"> MUA VÉ</button> </a>
+                        <h5>god father</h5>
+                        <h5>bố già</h5>
+                      </div>
+                    </div>
+                    <h4 class="title">Phim sắp chiếu</h4>
+                    <div class="list_film-present">
+                      <div class="content_film">
+                        <a class="poster_watch" href="#"><img class="poster"
+                            src="./img/venom-let-there-be-carnage-poster-1279326.jpg" alt="film"><button
+                            class="btn-secondary"> MUA VÉ</button> </a>
+                        <h5>Venom 2</h5>
+                        <h5>cuộc chiến sinh tử</h5>
+                      </div>
+                      <div class="content_film">
+                        <a class="poster_watch" href="#"><img class="poster"
+                            src="./img/LeagueofLegends_ArcanePosterWallpaper-6194df7a9e5a1.jpg" alt="film"><button
+                            class="btn-secondary"> MUA VÉ</button> </a>
+                        <h5>arcane</h5>
+                        <h5>arcane: giành lấy tự do</h5>
+                      </div>
+                      <div class="content_film">
+                        <a class="poster_watch" href="#"><img class="poster" src="./img/tải xuống.jpg" alt="film"><button
+                            class="btn-secondary"> MUA VÉ</button> </a>
+                        <h5>fast and furiuos 9</h5>
+                        <h5>nhanh và nguy hiểm 9</h5>
+                      </div>
+                      <div class="content_film">
+                        <a class="poster_watch" href="#"><img class="poster"
+                            src="./img/Sex-Education-Season-3-1024x577.jpeg" alt="film"><button class="btn-secondary"> MUA
+                            VÉ</button> </a>
+                        <h5>sex education 3</h5>
+                        <h5>giáo dục giới tính 3</h5>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class="menu-link">Góc điện ảnh</a>
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                  <ul class="menu">
+                    <li class="menu-item">
+                      <a href="#" class="menu-link">Thể loại phim</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#" class="menu-link">diễn viên</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#" class="menu-link">đạo diễn</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#" class="menu-link">bình luận phim</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#" class="menu-link">blog điện ảnh</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class="menu-link">Sự kiện</a>
+                  <ion-icon name="chevron-down-outline"></ion-icon>
+                  <ul class="menu">
+                    <li class="menu-item">
+                      <a href="#" class="menu-link">ưu đãi</a>
+                    </li>
+                    <li class="menu-item">
+                      <a href="#" class="menu-link">phim hay tháng</a>
+                    </li>
+                  </ul>
+    
+                </li>
+                <li class="menu-item">
+                  <a href="#" class="menu-link">Rạp/Giá vé</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class="menu-link">Hỗ trợ</a>
+                </li>
+                <li class="menu-item">
+                  <a href="#" class="menu-link">Thành Viên</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+</body>
+</html>

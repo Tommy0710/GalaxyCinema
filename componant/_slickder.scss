@@ -1,0 +1,101 @@
+.input-and-slick{
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+    & .input{
+        position: absolute;
+        z-index: 999;
+        top: 50px;
+        right: 90px;
+    }
+}
+.slick{ 
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+
+    &_poster{
+        position: relative;
+        .icon_watch{
+            position: absolute;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 50;
+            font-size: clamp(1rem ,5vw, 5rem);
+            color: white;
+            border-radius: 50%;
+            border: 0.02em solid white;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 0.45em 0.4em;
+            padding-left: 0.45em;
+            transition: .2s background-color ease;
+            cursor: pointer;
+            &:hover{
+                background-color: rgba(0, 0, 0, 0.4);
+            }
+        }
+       &-img{
+           & img{
+            height: clamp(20rem, 35vw, 51rem);
+            width: 100%;
+            object-fit: cover;
+           }
+       }
+    }
+}
+.slick-prev,.slick-next{
+    position: absolute;
+    z-index: 51;
+    height: 100%;
+    width: 1.333333em;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: clamp(1rem, 5vw, 6rem);
+    text-shadow: 0 0.0333em .16666em rgba(0, 0, 0, 0.4);
+    background-color: transparent ;
+    border: none;
+}
+.slick-prev{
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .1), transparent);
+    &:hover{
+        color: rgba(255, 255, 255, 0.8);
+        background-image: linear-gradient(to right, rgba(36, 36, 36, 0.4), transparent);
+    }
+}
+.slick-next{
+    right: 0;
+    top: 0;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, .1), transparent);
+    &:hover{
+        color: rgba(255, 255, 255, 0.8);
+        background-image: linear-gradient(to left, rgba(36, 36, 36, 0.4), transparent);
+    }
+}
+.slick-dots{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    gap: .6rem;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    & .slick-active button{
+        background-color: #f26b38;
+        border: 1px solid #f26b38;
+    }
+    & button{
+        background-color: transparent;
+        border-radius: 50%;
+        border: 1px solid white;
+        font-size: 0;
+        outline: none;
+        width: .8rem;
+        height: .8rem;
+        transition: .2s linear all;
+    }
+}

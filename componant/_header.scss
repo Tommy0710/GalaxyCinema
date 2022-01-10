@@ -1,0 +1,100 @@
+#header{
+
+    background-color: #f7f9fa;
+}
+.header{
+    &_top{
+        height: 8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &-logo{
+            width: 40rem;
+            height: 5rem;
+            background-size: cover;
+            background-image: url(../img/galaxy_long.png);
+        }
+        &-input{
+            position: relative;
+            margin-left: 0rem;
+            .input_search{
+                padding: .7rem 1.2rem;
+                padding-right: 6rem;
+                border: 1px solid rgba(161, 161, 161, 0.61);
+                &::-webkit-input-placeholder{
+                    color: rgb(161, 161, 161);
+                }
+                &:focus{
+                    border: 1px solid rgb(136, 136, 136);
+                }
+            }
+            .icon_search{
+                font-size: 2rem;
+                color: rgb(161, 161, 161);
+                position: absolute;
+                z-index: 98;
+                cursor: pointer;
+                right: 0;
+                top: 0;
+                position: relative;
+                transform: translate(-3rem, .6rem);
+                &:hover{
+                    color: rgb(136, 136, 136);
+                }
+            }
+        }
+        &-users{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.6rem;
+            color: $color-text;
+            font-size: 1.4rem;
+            padding: 0 2rem;
+            letter-spacing: .15rem;
+            position: relative;
+            .logIn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                cursor: pointer;
+                & p{
+                    font-size: 1.2rem;
+                }
+                &:hover{
+                    color: $color-primary;
+                }
+            }
+            .language{
+                cursor: pointer;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 1rem;
+                font-weight: 400;
+                & span:first-child{
+                    color: $color-primary;
+                    &:hover{
+                        color: $color-primary;
+                    }
+                }
+                & span:last-child{
+                    &:hover{
+                        color: $color-primary;
+                    }
+                }
+                &::after{
+                    content: '';
+                    position: absolute;
+                    height: 100%;
+                    width: .15rem;
+                    top: 0;
+                    left: 50%;
+                    background-color: rgb(161, 161, 161);
+                }
+            }
+        }
+    }
+}
