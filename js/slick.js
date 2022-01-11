@@ -1,3 +1,6 @@
+
+//thư viện slick slider 
+
 $(document).ready(function(){
     $(".slick").slick({
     infinite: true,

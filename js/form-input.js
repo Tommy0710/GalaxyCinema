@@ -1,3 +1,6 @@
+
+// thao tác khi check vào đăng nhập
+
 window.addEventListener('load', function(){
     const $ = document.querySelector.bind(document);
     const $$ = document.querySelectorAll.bind(document);

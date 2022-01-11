@@ -1,4 +1,7 @@
 
+// thanh tiến độ ở đầu trang web
+
+
  var h = document.documentElement,
  
  b = document.body,

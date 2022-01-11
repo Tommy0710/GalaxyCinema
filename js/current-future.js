@@ -1,3 +1,6 @@
+
+// thực hiện thao tác bấm vào phim đang chiếu và phim sắp chiếu ở listFilm.scss
+
 window.addEventListener('load', function(){
     const $ = document.querySelector.bind(document);
     const $$ = document.querySelectorAll.bind(document)

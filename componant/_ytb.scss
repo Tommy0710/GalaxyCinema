@@ -36,8 +36,9 @@
         background-color: white;
         border: 1px solid $color-text;
         & iframe{
-            width: 740px;
-            height: 420px;
+            $height-ytb: 420px;
+            width: calc(#{$height-ytb} * 37/21);
+            height: $height-ytb;
         }
     }
 }

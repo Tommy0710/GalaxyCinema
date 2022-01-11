@@ -1,3 +1,6 @@
+
+// bình luận phim render ra phim cho dễ sửa đổi
+
 const mainComment = document.querySelector('.comment_main-comment')
 const mainBlog = document.querySelector('.comment_main-blog')
 const app = {

@@ -1,3 +1,5 @@
+// thao tác của form chọn theo phim theo rạp theo ngày 
+
 window.addEventListener('load', function(){
     var links = document.querySelectorAll('.menu-link')
     function hoverLink2(){

@@ -1,4 +1,7 @@
 
+// menu lúc responsive 
+
+
 var nav = document.querySelector('.sideBar');
 var toggle = document.querySelector('.menu_toggle');
 function active(){

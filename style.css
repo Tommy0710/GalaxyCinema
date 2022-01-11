@@ -142,7 +142,7 @@ ion-icon {
   width: 40rem;
   height: 5rem;
   background-size: cover;
-  background-image: url(../img/galaxy_long.png);
+  background-image: url(./img/galaxy_long.png);
 }
 
 .header_top-input {
@@ -1051,7 +1051,7 @@ ion-icon {
 }
 
 .ytb_traler iframe {
-  width: 740px;
+  width: calc(420px * 37/21);
   height: 420px;
 }
 
@@ -1894,7 +1894,7 @@ input[type="search"]:focus {
   .title-right {
     margin-left: 0;
     margin-right: auto;
-    margin-top: 16px;
+    margin-top: 1.6rem;
   }
   .remark, .current, .discound, .galaxy {
     padding: 0 96px;
@@ -1948,6 +1948,20 @@ input[type="search"]:focus {
   }
   .input-and-slick .input {
     right: 0;
+  }
+  .ytb {
+    -webkit-transform: translate(-50%, -60%);
+            transform: translate(-50%, -60%);
+  }
+  .ytb h4 {
+    padding: 13px 8px;
+  }
+  .ytb_traler {
+    padding: 10px;
+  }
+  .ytb_traler iframe {
+    width: calc(50vw * 37/21);
+    height: 50vw;
   }
   .title-right a {
     display: none;

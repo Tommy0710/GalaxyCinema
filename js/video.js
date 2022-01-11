@@ -1,4 +1,7 @@
 
+// thao tác khi click vào nút pause hiện ra pop up video
+
+
 const icon_watch = document.querySelectorAll('.icon_watch')
 const ytb = document.querySelector('.ytb');
 
@@ -43,7 +46,7 @@ const body = document.body;
            `
      <h4 class="fadeInDown2">${list.nameFilm}</h4>
      <div class="ytb_traler fadeInDown2">
-     <iframe width="740" height="420" src="${list.path}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       
+     <iframe width="0" height="0" src="${list.path}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       
            `
     pause.addEventListener('click', function() {
         ytb.innerHTML = htmls

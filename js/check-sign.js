@@ -1,5 +1,5 @@
 
-
+// Thư viện để validate form đăng nhập và đăng ký
 
 function Validator(options) {
    var isEye = true

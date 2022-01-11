@@ -1,10 +1,13 @@
 @media screen and (max-width: 1160px){
+    // *{
+    //     font-size: 9px;
+    // }
     .title{
         flex-direction: column;
         &-right{
             margin-left: 0;
             margin-right: auto;
-            margin-top: 16px;
+            margin-top: 1.6rem;
         }
     }
     .remark,.current, .discound, .galaxy{
@@ -61,6 +64,20 @@
             right: 0;
         }
     }
+    .ytb{
+        transform: translate(-50%,-60%);
+    & h4{
+        padding: 13px 8px;
+    }
+    &_traler{
+        padding: 10px;
+        & iframe{
+            $height-ytb: 50vw;
+            width: calc(#{$height-ytb} * 37/21);
+            height: $height-ytb;
+        }
+    }
+}
     .title{
         &-right{
             & a{

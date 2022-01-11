@@ -1,3 +1,5 @@
+// form nhập chọn theo phim/ theo ngày/ theo rạp (mà là ressponsive)
+
 window.addEventListener('load', function(){
   const $ = document.querySelector.bind(document)
   const $$ = document.querySelectorAll.bind(document)
